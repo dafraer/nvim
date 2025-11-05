@@ -26,8 +26,6 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
---Enable lsp server for go
-vim.lsp.enable('gopls')
 
 --Check error by lsp using gl keys
 vim.keymap.set("n", "gl", vim.diagnostic.open_float, { desc = "Show diagnostic" })
@@ -45,5 +43,4 @@ vim.keymap.set("n", "<leader>]", vim.lsp.buf.definition, { noremap = true, silen
 vim.keymap.set("n", "<leader>t", "<C-t>", { noremap = true, silent = true })
 
 --make it so cursor can freely move around
-set virtualedit=all
-
+vim.o.virtualedit = "all"
